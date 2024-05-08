@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-import Breadcrumbs from '@components/common/Breadcrumbs';
 import cn from 'classnames';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
@@ -405,13 +404,12 @@ export default function HeroPage() {
             <h1 className="font-bold leading-none uppercase text-heading">
               <strong>{'MANAGE FORM'}</strong>
             </h1>
-            <Breadcrumbs label="FORM" />
+            {/* <Breadcrumbs label="FORM" /> */}
           </motion.div>
         </div>
         {
           <FormBuilder
             onSave={(data: any) => {
-              console.log(data);
               setIsOpen(true);
             }}
           />
