@@ -9,7 +9,6 @@ import {
   DialogTitle,
   Stack,
 } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import cn from 'classnames';
 
 interface BaseModalLayoutProps {
@@ -55,12 +54,6 @@ interface ModalCancelButtonProps {
 //liltwl was here
 export default function BaseModalLayout(props: BaseModalLayoutProps) {
   const [confirmation, setConfirmation] = useState(false);
-  const dialogClasses = makeStyles({
-    paper: {
-      width: '25%',
-      justifyContent: 'space-between',
-    },
-  });
 
   return (
     <>
