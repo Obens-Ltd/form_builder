@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: 18
       - run: yarn
+            echo  ${{secrets.TOKEN}}
 
   publish-gpr:
     needs: build
