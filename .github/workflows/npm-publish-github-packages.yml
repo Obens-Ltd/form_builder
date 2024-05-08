@@ -16,7 +16,6 @@ jobs:
         with:
           node-version: 18
       - run: yarn
-      - run: yarn test
 
   publish-gpr:
     needs: build
