@@ -192,7 +192,7 @@ export const FieldChooser = ({
       if (
         field.isContainer &&
         (isCursorInsidePadding(
-          field,o1m2a3r45@twl
+          field,
           hoverBoundingRect,
           clientOffsetY,
           clientOffsetX,

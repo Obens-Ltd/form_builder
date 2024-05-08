@@ -38,7 +38,6 @@ function OBENSApp({ Component, pageProps }: AppProps): JSX.Element {
         <DndProvider backend={HTML5Backend}>
           <IngredientContextProvider>
             <FormBuilderProvider>
-              {/* {pageLoading && <Loading />} */}
               <Component {...pageProps} key={router.route} />
             </FormBuilderProvider>
           </IngredientContextProvider>
