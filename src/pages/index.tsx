@@ -17,8 +17,6 @@ import BaseModalLayout from '@components/modals/BaseModalLayout';
 import { useFormBuilder } from '@contexts/formBuilder-context';
 import { useIngredient } from '@contexts/ingredient-context';
 
-import DefaultLayout from '../layouts/default.layout';
-
 const useOutsideClick = (
   callback: () => void,
   exceptionRef: any,
@@ -426,5 +424,3 @@ export default function HeroPage() {
     </>
   );
 }
-
-HeroPage.Layout = DefaultLayout;
