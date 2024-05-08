@@ -1,0 +1,96 @@
+/* purgecss start ignore */
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+/* purgecss end ignore */
+
+/* purgecss start ignore */
+html {
+  @apply antialiased font-sans;
+}
+
+input {
+  --tw-ring-color: transparent !important;
+  outline: 2px solid transparent !important;
+  outline-offset: 2px !important;
+}
+
+input:hover {
+  --tw-ring-color: transparent !important;
+  outline: 2px solid transparent !important;
+  outline-offset: 2px !important;
+}
+
+.shadow-primary-btn:hover {
+  box-shadow: 0 0 25px #added3;
+}
+
+.shadow-sm-primary-btn:hover {
+  box-shadow: 0 0 15px #added3;
+}
+
+.shadow-red-btn:hover {
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.6);
+}
+
+.shadow-sm-red-btn:hover {
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.6);
+}
+
+.shadow-blue-btn:hover {
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.6);
+}
+
+.shadow-sm-blue-btn:hover {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+}
+
+.bottom-nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 25%;
+  height: 5px;
+  background-color: #2c7a7b !important;
+  border-radius: 5px 5px 0 0;
+}
+
+.hover\:bottom-nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 25%;
+  height: 5px;
+  background-color: transparent;
+  border-radius: 5px 5px 0 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.hover\:bottom-nav-active:hover::after {
+  background-color: #2c7a7b;
+}
+
+.obens-select__control {
+  box-shadow: none !important;
+}
+
+.obens-select__dropdown-indicator {
+  color: rgba(107, 114, 128, 1) !important;
+}
+
+.obens-select__option--is-selected {
+  background-color: #16877f !important;
+  color: white !important;
+}
+
+.obens-select__clear-indicator {
+  display: none !important;
+}
+
+.obens-select__single-value--is-disabled {
+  color: rgba(31, 41, 55, 1) !important;
+}

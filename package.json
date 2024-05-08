@@ -1,27 +1,71 @@
 {
-  "name": "obens_rebuilt_test",
+  "name": "@obens-ltd/form_builder",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "export": "next export",
+    "type-check": "tsc --pretty --noEmit",
+    "lint": "eslint '*/**/*.{js,jsx,ts,tsx}' --quiet",
+    "format": "prettier --write '*/**/*.{js,jsx,ts,tsx,json,css,md}'",
+    "test": "jest",
+    "test-all": "yarn lint && yarn type-check && yarn test",
+    "netlify:deploy": "next build && next export"
   },
   "dependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@headlessui/react": "^1.7.19",
+    "@mui/material": "^5.15.14",
+    "@mui/styles": "^5.15.16",
+    "bson-objectid": "^2.0.4",
+    "classnames": "^2.5.1",
+    "framer-motion": "^11.0.24",
+    "next": "14.1.4",
     "react": "^18",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^18",
-    "next": "14.1.4"
+    "react-dropzone": "^14.2.3",
+    "react-hook-form": "^7.51.2",
+    "react-icons": "^5.0.1",
+    "react-select": "^5.8.0",
+    "react-spinners": "^0.13.8",
+    "sass": "^1.76.0"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
     "autoprefixer": "^10.0.1",
+    "eslint": "^8.0.1",
+    "eslint-config-next": "14.1.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest-dom": "^5.2.0",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-tailwind": "^0.2.1",
+    "eslint-plugin-unused-imports": "^3.1.0",
     "postcss": "^8",
+    "prettier": "^3.2.5",
     "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.4"
-  }
+    "typescript": "*"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "main": "index.js",
+  "author": "liltwl <tawilomar5@gmail.com>",
+  "license": "MIT"
 }
