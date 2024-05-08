@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
+import Breadcrumbs from '@components/common/Breadcrumbs';
 import cn from 'classnames';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
@@ -11,7 +12,6 @@ import {
   IoTrashOutline,
 } from 'react-icons/io5';
 
-import Breadcrumbs from '@components/common/Breadcrumbs';
 import { FieldChooser } from '@components/formBuilder/formFields';
 import { FormOption } from '@components/formBuilder/formOptions';
 import BaseModalLayout from '@components/modals/BaseModalLayout';
@@ -69,7 +69,7 @@ const useOutsideClick = (
   return wrapperRef;
 };
 
-const FormGenerator = ({
+export const FormGenerator = ({
   field,
   parentId,
   order = 0,
@@ -133,7 +133,7 @@ const FormGenerator = ({
   );
 };
 
-const FormScreen = () => {
+export const FormScreen = () => {
   const {
     formList,
     selectedField,
