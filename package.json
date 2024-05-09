@@ -60,6 +60,9 @@
     "tailwindcss": "^3.3.0",
     "typescript": "*"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "main": "index.tsx",
   "author": "liltwl <tawilomar5@gmail.com>",
   "license": "MIT"
