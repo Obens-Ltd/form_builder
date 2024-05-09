@@ -22,7 +22,6 @@ jobs:
       - run: |
 
           yarn
-          npm adduser
           npm publish
         env:
           GITHUB_TOKEN: ${{ github.token }}
