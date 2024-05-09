@@ -21,6 +21,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: |
           yarn
-          npm publish
+          yarn publish
         env:
           GITHUB_TOKEN: ${{ github.token }}
