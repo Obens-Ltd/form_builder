@@ -2,7 +2,6 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 
 import cn from 'classnames';
 import { motion } from 'framer-motion';
-import Head from 'next/head';
 import { AiOutlineEdit } from 'react-icons/ai';
 import {
   IoAddOutline,
@@ -15,7 +14,6 @@ import { FieldChooser } from '@components/formBuilder/formFields';
 import { FormOption } from '@components/formBuilder/formOptions';
 import BaseModalLayout from '@components/modals/BaseModalLayout';
 import { useFormBuilder } from '@contexts/formBuilder-context';
-import { useIngredient } from '@contexts/ingredient-context';
 
 const useOutsideClick = (
   callback: () => void,
@@ -201,8 +199,6 @@ const FormViewer = ({
     // setSelectedField(null);
   }, []);
 
-  const { AddStepToIng } = useIngredient();
-
   const wrapperRef = useOutsideClick(
     handleClickOut,
     exceptionRef,
@@ -364,31 +360,8 @@ export default function HeroPage() {
   const ref = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  // const [{ isOver, canDrop }, feilDrop] = useDrop(() => ({
-  //   accept: 'field',
-  //   drop: (item: any) => {
-  //     clearDropEreas(formList, formList);
-  //   },
-  //   collect: (monitor) => ({
-  //     isOver: monitor.isOver(),
-  //     canDrop: monitor.canDrop(),
-  //   }),
-  // }));
-
-  // feilDrop(ref);
-
-  useEffect(() => {
-    // console.log('formList', formList);
-    // addFieldConponent('DateInput', FormDateInput);
-  });
-
   return (
     <>
-      <Head>
-        <title>FORM BUILDER | OBENS Dashboard</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <div
         ref={ref}
         className="flex flex-col items-start justify-center w-full mx-auto text-center "
@@ -424,3 +397,8 @@ export default function HeroPage() {
     </>
   );
 }
+
+export {
+  FormBuilderProvider,
+  useFormBuilder,
+} from '@contexts/formBuilder-context';

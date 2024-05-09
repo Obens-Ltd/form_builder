@@ -63,7 +63,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "main": "index.tsx",
+  "main": "pages/index.tsx",
   "author": "liltwl <tawilomar5@gmail.com>",
   "license": "MIT"
 }
