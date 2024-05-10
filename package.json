@@ -14,12 +14,11 @@
     "netlify:deploy": "next build && next export"
   },
   "dependencies": {
-    "@babel/core": "^7.24.5",
-    "@babel/preset-env": "^7.24.5",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@headlessui/react": "^1.7.19",
     "@mui/material": "^5.15.14",
+    "babel-jest": "^29.7.0",
     "bson-objectid": "^2.0.4",
     "classnames": "^2.5.1",
     "framer-motion": "^11.0.24",
@@ -36,6 +35,8 @@
     "sass": "^1.76.0"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -57,6 +58,11 @@
     "eslint-plugin-unused-imports": "^3.1.0",
     "postcss": "^8",
     "prettier": "^3.2.5",
+    "rollup": "^4.17.2",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
     "tailwindcss": "^3.3.0",
     "typescript": "*"
   },
@@ -64,7 +70,10 @@
     "registry": "https://npm.pkg.github.com"
   },
   "main": "dist/index.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "author": "liltwl <tawilomar5@gmail.com>",
+  "source": "src/index.ts",
   "license": "MIT"
 }
