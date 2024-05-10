@@ -283,7 +283,7 @@ const FormBuilderProvider = ({ children }: { children: React.ReactNode }) => {
     return null;
   }, []);
 
-  const getOrderById: (v: string) => number = useCallback(
+  const getOrderById = useCallback(
     (id: string): number => {
       const parent = findParent(id, formList);
       if (parent?.children) {

@@ -63,7 +63,7 @@ export default function CreatableSelectInput({
       />
       {error && (
         <div className="flex items-center justify-between pt-1 text-red-400">
-          <p className="text-xs">{error.message}</p>
+          <p className="text-xs">{'error?.message'}</p>
           <IoCloseCircleOutline className="w-4 h-4 m-0" />
         </div>
       )}

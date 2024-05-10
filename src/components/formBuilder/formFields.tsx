@@ -154,7 +154,7 @@ export const FieldChooser = ({
               : clientOffsetY && clientOffsetY - hoverT < (hoverB - hoverT) / 2
           )
             ? getOrderById(field?.id)
-            : parseInt(getOrderById(field?.id)) + 1,
+            : (getOrderById(field?.id) as any) + 1,
           item?.field,
         );
       }
