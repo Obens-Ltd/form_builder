@@ -80,49 +80,46 @@ export const FormGenerator = ({
     isFormEditable,
     updateField,
   } = useFormBuilder();
-  // const [Field, setField] = useState<any>(
-  //   allFormFields.get(field?.type),
-  // ) as any;
+
   const Field = allFormFields?.get(field?.type);
 
-  // useEffect(() => {
-  //   setField(allFormFields.get(field?.type));
-  // }, [field, allFormFields]);
   return (
-    <div className="flex flex-row items-start justify-start w-full">
-      {
-        <FieldChooser
-          display={isEditable}
-          order={order}
-          parentId={parentId}
-          field={field}
-        >
-          {Field && (
-            <Field
-              isEditable={!isEditable}
-              id={field?.id}
-              key={field?.id}
-              field={field}
-              selectedId={selectedField}
-              setSelectedid={setSelectedField}
-              onChange={(env: any) => {
-                updateField({ ...field, defaultValue: env.target.value });
-              }}
-            >
-              {field?.children?.map((child: any, index: number) => (
-                <FormGenerator
-                  key={child.id}
-                  isEditable={isEditable}
-                  order={index}
-                  field={child}
-                  parentId={field.id}
-                />
-              ))}
-            </Field>
-          )}
-        </FieldChooser>
-      }
-    </div>
+    <>
+      <div className="flex flex-row items-start justify-start w-full">
+        {Field && (
+          <FieldChooser
+            display={isEditable}
+            order={order}
+            parentId={parentId}
+            field={field}
+          >
+            {Field && (
+              <Field
+                isEditable={!isEditable}
+                id={field?.id}
+                key={field?.id}
+                field={field}
+                selectedId={selectedField}
+                setSelectedid={setSelectedField}
+                onChange={(env: any) => {
+                  updateField({ ...field, defaultValue: env.target.value });
+                }}
+              >
+                {field?.children?.map((child: any, index: number) => (
+                  <FormGenerator
+                    key={child.id}
+                    isEditable={isEditable}
+                    order={index}
+                    field={child}
+                    parentId={field.id}
+                  />
+                ))}
+              </Field>
+            )}
+          </FieldChooser>
+        )}
+      </div>
+    </>
   );
 };
 
@@ -292,7 +289,7 @@ const FormViewer = ({
   );
 };
 
-export const FormBuilder = ({ onSave }: { onSave?: (data: any) => void }) => {
+const FormBuilder = ({ onSave }: { onSave?: (data: any) => void }) => {
   const { formList, selectedField } = useFormBuilder();
 
   return (
@@ -311,3 +308,5 @@ export const FormBuilder = ({ onSave }: { onSave?: (data: any) => void }) => {
     </div>
   );
 };
+
+export default FormBuilder;

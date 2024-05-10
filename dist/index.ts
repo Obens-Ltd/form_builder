@@ -1,23 +1,31 @@
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var formBuilder = require('@components/formBuilder/formBuilder');
-var formBuilderContext = require('@contexts/formBuilder-context');
 
+// export { FormBuilder } from './pages';
 
+// export {
+//   FormBuilderProvider,
+//   useFormBuilder,
+// } from './contexts/formBuilder-context';
 
-Object.defineProperty(exports, "FormBuilder", {
+Object.defineProperty(exports, 'FormBuilder', {
   enumerable: true,
-  get: function () { return formBuilder.FormBuilder; }
+  get: function () {
+    return formBuilder.FormBuilder;
+  },
 });
-Object.defineProperty(exports, "FormGenerator", {
+Object.defineProperty(exports, 'FormGenerator', {
   enumerable: true,
-  get: function () { return formBuilder.FormGenerator; }
+  get: function () {
+    return formBuilder.FormGenerator;
+  },
 });
-Object.defineProperty(exports, "FormBuilderProvider", {
+Object.defineProperty(exports, 'default', {
   enumerable: true,
-  get: function () { return formBuilderContext.FormBuilderProvider; }
-});
-Object.defineProperty(exports, "useFormBuilder", {
-  enumerable: true,
-  get: function () { return formBuilderContext.useFormBuilder; }
+  get: function () {
+    return formBuilder.FormBuilder;
+  },
 });

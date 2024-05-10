@@ -1,11 +1,6 @@
 module.exports = {
   plugins: ['jest-dom', 'unused-imports', 'prettier'],
-  extends: [
-    'next/core-web-vitals',
-    'plugin:jest-dom/recommended',
-    'plugin:tailwind/recommended',
-    'plugin:prettier/recommended',
-  ],
+  extends: ['next/core-web-vitals', 'plugin:jest-dom/recommended', 'plugin:tailwind/recommended', 'plugin:prettier/recommended', 'plugin:storybook/recommended'],
   env: {
     es6: true,
     browser: true,

@@ -1,11 +1,7 @@
 // export { FormBuilder } from './pages';
 
-export {
-  FormBuilder,
-  FormGenerator,
-} from '@components/formBuilder/formBuilder';
+export { default as FormBuilder } from './components/formBuilder/formBuilder';
 
-export {
-  FormBuilderProvider,
-  useFormBuilder,
-} from '@contexts/formBuilder-context';
+export * from './components/formBuilder/formBuilder';
+
+export * from './contexts/formBuilder-context';
