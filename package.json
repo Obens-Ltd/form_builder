@@ -3,7 +3,7 @@
   "version": "0.1.8",
   "scripts": {
     "dev": "next dev",
-    "build": " rollup -c",
+    "build": "rollup -c",
     "start": "next start",
     "export": "next export",
     "type-check": "tsc --pretty --noEmit",
@@ -87,9 +87,6 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
