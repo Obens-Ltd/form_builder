@@ -13,54 +13,6 @@ import { FieldChooser } from '@components/formBuilder/formFields';
 import { FormOption } from '@components/formBuilder/formOptions';
 import { useFormBuilder } from '@contexts/formBuilder-context';
 
-const useOutsideClick = (
-  callback: () => void,
-  exceptionRef: any,
-  handleClickOut: () => void,
-) => {
-  const wrapperRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleClick = () => {
-      callback();
-    };
-
-    document.addEventListener('click', handleClick);
-
-    return () => {
-      document.removeEventListener('click', handleClick);
-    };
-  }, [callback]);
-
-  const handleClickListener = useCallback(
-    (event: any) => {
-      let clickedInside;
-      if (exceptionRef) {
-        clickedInside =
-          (wrapperRef && wrapperRef.current?.contains(event.target)) ||
-          exceptionRef?.current === event?.target ||
-          exceptionRef?.current?.contains(event.target);
-      } else {
-        clickedInside =
-          wrapperRef && wrapperRef.current?.contains(event.target);
-      }
-
-      if (!clickedInside) return;
-      else handleClickOut();
-    },
-    [exceptionRef, handleClickOut],
-  );
-
-  useEffect(() => {
-    document.addEventListener('mouseup', handleClickListener);
-
-    return () => {
-      document.removeEventListener('mouseup', handleClickListener);
-    };
-  }, [handleClickListener]);
-
-  return wrapperRef;
-};
 
 export const FormGenerator = ({
   field,
@@ -194,11 +146,6 @@ const FormViewer = ({
     // setSelectedField(null);
   }, []);
 
-  const wrapperRef = useOutsideClick(
-    handleClickOut,
-    exceptionRef,
-    handleClickOut,
-  );
 
   return (
     <div
