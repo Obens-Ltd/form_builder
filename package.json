@@ -1,6 +1,6 @@
 {
   "name": "@Obens-Ltd/form_builder",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "scripts": {
     "dev": "next dev",
     "build": "rollup -c",
