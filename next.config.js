@@ -4,8 +4,6 @@
 const nextConfig = {
   reactStrictMode: true,
 
-  distDir: 'dist',
-
   images: {
     unoptimized: true,
     domains: [

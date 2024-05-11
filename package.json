@@ -87,9 +87,6 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "files": [
-    "dist"
-  ],
   "main": "index.tsx",
   "author": "liltwl <tawilomar5@gmail.com>",
   "source": "src/index.ts",
