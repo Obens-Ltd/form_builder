@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback } from 'react';
 
 import cn from 'classnames';
 import { AiOutlineEdit } from 'react-icons/ai';
@@ -9,10 +9,9 @@ import {
   IoTrashOutline,
 } from 'react-icons/io5';
 
-import { FieldChooser } from '@components/formBuilder/formFields';
-import { FormOption } from '@components/formBuilder/formOptions';
-import { useFormBuilder } from '@contexts/formBuilder-context';
-
+import { FieldChooser } from './formFields';
+import { FormOption } from './formOptions';
+import { useFormBuilder } from '../../contexts/formBuilder-context';
 
 export const FormGenerator = ({
   field,
@@ -145,7 +144,6 @@ const FormViewer = ({
   const handleClickOut = useCallback(() => {
     // setSelectedField(null);
   }, []);
-
 
   return (
     <div

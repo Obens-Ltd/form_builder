@@ -1,9 +1,9 @@
 {
   "name": "@Obens-Ltd/form_builder",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "scripts": {
     "dev": "next dev",
-    "build": "rollup -c",
+    "build": "next build",
     "start": "next start",
     "export": "next export",
     "type-check": "tsc --pretty --noEmit",
@@ -17,13 +17,17 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@headlessui/react": "^1.7.19",
     "@mui/material": "^5.15.14",
     "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@rollup/plugin-url": "^8.0.2",
     "babel-jest": "^29.7.0",
     "bson-objectid": "^2.0.4",
     "classnames": "^2.5.1",
@@ -82,13 +86,22 @@
     "rollup-plugin-typescript2": "^0.36.0",
     "storybook": "^8.0.10",
     "tailwindcss": "^3.3.0",
-    "typescript": "*"
+    "typescript": "*",
+    "webpack-cli": "^5.1.4"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "main": "index.tsx",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": ["dist"],
   "author": "liltwl <tawilomar5@gmail.com>",
-  "source": "src/index.ts",
-  "license": "MIT"
+  "license": "MIT",
+  
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  }
 }

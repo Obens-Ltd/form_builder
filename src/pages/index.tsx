@@ -2,45 +2,43 @@ import { useRef, useState } from 'react';
 
 import { motion } from 'framer-motion';
 
-import { FormGenerator } from '@components/formBuilder/formBuilder';
-import BaseModalLayout from '@components/modals/BaseModalLayout';
 import { useFormBuilder } from '@contexts/formBuilder-context';
 import { FormBuilder } from '@index';
 
-const FormBaseModalGenerator = ({
-  isOpen,
-  setIsOpen,
-  formList,
-}: {
-  isOpen: boolean;
-  setIsOpen: (value: boolean) => void;
-  formList: any;
-}) => {
-  // const { formList, selectedField, setSelectedField } = useFormBuilder();
-  return (
-    <BaseModalLayout
-      isOpen={isOpen}
-      setIsOpen={setIsOpen}
-      title="Test Lab Request"
-      description="Here you can view test lab requests."
-      loading={false}
-      onSubmit={function (e?: any): void {
-        throw new Error('Function not implemented.');
-      }}
-      isSubmitable
-    >
-      {formList?.type === 'Screen' &&
-        formList?.children?.map((form: any, index: any) => (
-          <FormGenerator
-            key={index}
-            isEditable={false}
-            field={form}
-            parentId={form}
-          />
-        ))}
-    </BaseModalLayout>
-  );
-};
+// const FormBaseModalGenerator = ({
+//   isOpen,
+//   setIsOpen,
+//   formList,
+// }: {
+//   isOpen: boolean;
+//   setIsOpen: (value: boolean) => void;
+//   formList: any;
+// }) => {
+//   // const { formList, selectedField, setSelectedField } = useFormBuilder();
+//   return (
+//     <BaseModalLayout
+//       isOpen={isOpen}
+//       setIsOpen={setIsOpen}
+//       title="Test Lab Request"
+//       description="Here you can view test lab requests."
+//       loading={false}
+//       onSubmit={function (e?: any): void {
+//         throw new Error('Function not implemented.');
+//       }}
+//       isSubmitable
+//     >
+//       {formList?.type === 'Screen' &&
+//         formList?.children?.map((form: any, index: any) => (
+//           <FormGenerator
+//             key={index}
+//             isEditable={false}
+//             field={form}
+//             parentId={form}
+//           />
+//         ))}
+//     </BaseModalLayout>
+//   );
+// };
 
 export default function HeroPage() {
   const {
@@ -80,13 +78,6 @@ export default function HeroPage() {
         }
         <div className="w-full h-16 spacer" />
       </div>
-      {isOpen && (
-        <FormBaseModalGenerator
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          formList={formList}
-        />
-      )}
     </>
   );
 }

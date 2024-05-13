@@ -12,7 +12,7 @@ import {
   FormNumberInput,
   FormSection,
   FormTextInput,
-} from '@components/formBuilder/formFields';
+} from '../components/formBuilder/formFields';
 import {
   ContainerOptions,
   DateFieldOptions,
@@ -21,8 +21,8 @@ import {
   LongTextInputFieldOptions,
   MultiDropDownFieldOptions,
   NumberInputFieldOptions,
-} from '@components/formBuilder/formOptions';
-import { formList } from '@interfaces';
+} from '../components/formBuilder/formOptions';
+import { formList } from '../interfaces';
 
 const initialForm = {
   id: '22222',

@@ -5,10 +5,10 @@ import { useDrag, useDrop } from 'react-dnd';
 import { GrClone } from 'react-icons/gr';
 import { IoAddOutline, IoTrashOutline } from 'react-icons/io5';
 
-import SelectInput from '@components/inputs/SelectInput';
-import TextareaInput from '@components/inputs/TextareaInput';
-import TextInput from '@components/inputs/TextInput';
-import { useFormBuilder } from '@contexts/formBuilder-context';
+import { useFormBuilder } from '../../contexts/formBuilder-context';
+import SelectInput from '../inputs/SelectInput';
+import TextareaInput from '../inputs/TextareaInput';
+import TextInput from '../inputs/TextInput';
 
 export const FieldChooser = ({
   children,
